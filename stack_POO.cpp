@@ -56,7 +56,7 @@ void Stack::push(string name)
 	Node *newNode = createNode(name);
 	
 	newNode->next = stack;			// node: 4 -> stack: 3->2->1  merge newNode & stack
-	stack = newNode;				// stack: 4->3->2->1
+	stack = newNode;			// stack: 4->3->2->1
 	
 	top++;
 }
@@ -70,7 +70,7 @@ string Stack::pop()
 	stack = stack_aux->next;		// overwrite stack with the second node
 	top--;
 		
-	delete(stack_aux);				// delete old stack
+	delete(stack_aux);			// delete old stack
 		
 	return data_aux;
 }
@@ -79,7 +79,7 @@ void Stack::clear()
 {
 	Node *node_aux;
 	while (stack != NULL) {	
-		node_aux = stack;					// get node to delete
+		node_aux = stack;				// get node to delete
 						
 		cout<< " "<< stack->data<< " - ";
 			
@@ -102,7 +102,7 @@ bool Stack::contains(string name)
 		stack_aux = stack_aux->next; 
 	}
 		
-	if (stack_aux == NULL) {								// overflow stack
+	if (stack_aux == NULL) {				// overflow stack
 		return false;
 	} else {
 		return true;
@@ -125,7 +125,7 @@ void Stack::show()
 	
 	stack_aux = stack;
 		
-	while (stack_aux != NULL) {				// iterating the whole stack to the end
+	while (stack_aux != NULL) {			// iterating the whole stack to the end
 		cout<< " |- \t\t"<< stack_aux->data<< "\t\t -|"<< endl;
 			
 		stack_aux = stack_aux->next; 		// continue to next node
