@@ -163,7 +163,7 @@ int main()
 		
 		cout<< "\t..::Menu::..\n"<< endl;
 		cout<< " [1] Add Name"<< endl;
-		cout<< " [2] Show Stack"<< endl;
+		cout<< " [2] Show queue"<< endl;
 		cout<< " [3] Remove Name"<< endl;
 		cout<< " [4] Get Head"<< endl;
 		cout<< " [5] Get Size"<< endl;
@@ -182,7 +182,7 @@ int main()
 				
 			case 2:
 				if (!queue->isEmpty()) {
-					cout<< "\n\n\tShowing stack...\n"<< endl;
+					cout<< "\n\n\tShowing queue...\n"<< endl;
 					
 					queue->show();	
 					cout<< "\n"<< endl;
