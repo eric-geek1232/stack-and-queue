@@ -60,7 +60,7 @@ string Queue::add(string name)
 	if (isEmpty()) {			// first element just add to front
 		front = newNode;
 	} else {
-		rear->next = newNode;	// add to rear
+		rear->next = newNode;		// add to rear
 	}
 	
 	rear = newNode;				// always rear points to end
@@ -74,10 +74,10 @@ string Queue::remove()
 	string item_aux;
 	Node *front_aux = front; 	// get the whole queue from the front
 	
-	item_aux = front_aux->data; // get current data
+	item_aux = front_aux->data; 	// get current data
 	
 	if (front == rear) { 		// when there's only a element
-		front = NULL;			// initial conditions
+		front = NULL;		// initial conditions
 		rear = NULL;
 		size = -1;
 	} else {
@@ -85,14 +85,14 @@ string Queue::remove()
 		size--;	
 	}
 
-	delete front_aux;			// delete old queue
+	delete front_aux;		// delete old queue
 	
 	return item_aux;
 }
 
 void Queue::showQueue(Node *front)
 {
-	if (front == NULL){			// end queue
+	if (front == NULL){		// end queue
 		return;
 	}
 		
@@ -114,9 +114,9 @@ void Queue::clearQueue(Node *&front)	// when you use recursion you must implemen
 {
 	Node *node_aux = front;
 	
-	if (front == rear) {				// last node 
+	if (front == rear) {		// last node 
 		cout<< " "<< front->data<< " .\n"<< endl;
-		front = NULL;					// initial conditions
+		front = NULL;		// initial conditions
 		rear = NULL;
 		size = -1;
 		
@@ -125,7 +125,7 @@ void Queue::clearQueue(Node *&front)	// when you use recursion you must implemen
 		front = front->next;			// overwrite front with next node;
 		size--;
 		
-		clearQueue(front);				// keep iterating
+		clearQueue(front);			// keep iterating
 	}
 		
 	delete node_aux;
