@@ -1,5 +1,5 @@
 # stack-and-queue
-c++, OOP you can implement these algorithms on any lenguaje
+c++, OOP you can implement these algorithms in any lenguaje
 
 # stack
 
